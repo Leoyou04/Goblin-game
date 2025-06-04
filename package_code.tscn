@@ -1,10 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://cb5644vwj3qqx"]
+[gd_scene load_steps=4 format=3 uid="uid://cb5644vwj3qqx"]
 
 [ext_resource type="Texture2D" uid="uid://dukuwihlphrsr" path="res://icon.svg" id="1_7davj"]
 [ext_resource type="Script" uid="uid://mt475owx4gt6" path="res://enemy.gd" id="1_7q8iw"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_rt7gq"]
-size = Vector2(27.4105, 26.7876)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_7davj"]
 radius = 156.24
@@ -12,27 +9,24 @@ radius = 156.24
 [node name="Node2D" type="Node2D"]
 scale = Vector2(0.364824, 0.223984)
 
-[node name="Enemy" type="CharacterBody2D" parent="."]
+[node name="Package" type="CharacterBody2D" parent="."]
 script = ExtResource("1_7q8iw")
 
-[node name="Sprite2D" type="Sprite2D" parent="Enemy"]
+[node name="Sprite2D" type="Sprite2D" parent="Package"]
 modulate = Color(0.179687, 0.478219, 0.4611, 1)
 position = Vector2(-1, -1)
 scale = Vector2(0.179688, 0.164063)
 texture = ExtResource("1_7davj")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy"]
-position = Vector2(-2.84217e-14, -2.84217e-14)
-shape = SubResource("RectangleShape2D_rt7gq")
-
-[node name="Detection_area" type="Area2D" parent="Enemy"]
+[node name="Area2D" type="Area2D" parent="Package"]
 position = Vector2(-5.96046e-08, -5.96046e-08)
+scale = Vector2(1, 1)
 collision_layer = 2
 collision_mask = 2
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/Detection_area"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Package/Area2D"]
 position = Vector2(-1.90735e-06, 7.62939e-06)
 shape = SubResource("CircleShape2D_7davj")
 
-[connection signal="body_entered" from="Enemy/Detection_area" to="Enemy" method="_on_detection_area_body_entered"]
-[connection signal="body_exited" from="Enemy/Detection_area" to="Enemy" method="_on_detection_area_body_exited"]
+[connection signal="body_entered" from="Package/Area2D" to="Package" method="_on_detection_area_body_entered"]
+[connection signal="body_exited" from="Package/Area2D" to="Package" method="_on_detection_area_body_exited"]

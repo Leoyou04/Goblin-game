@@ -1,0 +1,36 @@
+[gd_scene load_steps=6 format=3 uid="uid://c7iifluhty8t7"]
+
+[ext_resource type="Script" uid="uid://cp0psdv12krc3" path="res://area_2d.gd" id="1_82pn0"]
+[ext_resource type="Texture2D" uid="uid://cneg0qaobywcs" path="res://Terrain (16x16).png" id="2_k2rib"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w48qg"]
+atlas = ExtResource("2_k2rib")
+region = Rect2(280, 108, 4, 2)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xaign"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w48qg")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qyyip"]
+size = Vector2(3699.5, 25)
+
+[node name="death thing boing" type="Area2D"]
+script = ExtResource("1_82pn0")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(1912.5, 673)
+scale = Vector2(923.75, 30)
+sprite_frames = SubResource("SpriteFrames_xaign")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1916, 655.5)
+shape = SubResource("RectangleShape2D_qyyip")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
