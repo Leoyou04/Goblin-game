@@ -1,6 +1,6 @@
 extends Node2D
 
-@export var speed := 200
+@export var speed := 300
 @onready var area = $Area2D
 
 var player: Node2D = null

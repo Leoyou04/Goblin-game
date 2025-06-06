@@ -1,10 +1,49 @@
-[gd_scene load_steps=4 format=3 uid="uid://cb5644vwj3qqx"]
+[gd_scene load_steps=10 format=3 uid="uid://cb5644vwj3qqx"]
 
-[ext_resource type="Texture2D" uid="uid://dukuwihlphrsr" path="res://icon.svg" id="1_7davj"]
 [ext_resource type="Script" uid="uid://mt475owx4gt6" path="res://enemy.gd" id="1_7q8iw"]
+[ext_resource type="Texture2D" uid="uid://bkcbikbvcxni0" path="res://FLYING.png" id="2_7davj"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7q8iw"]
+atlas = ExtResource("2_7davj")
+region = Rect2(0, 0, 81, 71)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gyqw4"]
+atlas = ExtResource("2_7davj")
+region = Rect2(81, 0, 81, 71)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x74gu"]
+atlas = ExtResource("2_7davj")
+region = Rect2(162, 0, 81, 71)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_34xv4"]
+atlas = ExtResource("2_7davj")
+region = Rect2(243, 0, 81, 71)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_2qrey"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7q8iw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gyqw4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x74gu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_34xv4")
+}],
+"loop": true,
+"name": &"default",
+"speed": 11.0
+}]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_7davj"]
 radius = 156.24
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7davj"]
+size = Vector2(32.8926, 36.7876)
 
 [node name="Node2D" type="Node2D"]
 scale = Vector2(0.364824, 0.223984)
@@ -12,21 +51,32 @@ scale = Vector2(0.364824, 0.223984)
 [node name="Package" type="CharacterBody2D" parent="."]
 script = ExtResource("1_7q8iw")
 
-[node name="Sprite2D" type="Sprite2D" parent="Package"]
-modulate = Color(0.179687, 0.478219, 0.4611, 1)
-position = Vector2(-1, -1)
-scale = Vector2(0.179688, 0.164063)
-texture = ExtResource("1_7davj")
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Package"]
+position = Vector2(2.27374e-13, 0)
+scale = Vector2(0.439921, 0.565936)
+sprite_frames = SubResource("SpriteFrames_2qrey")
+autoplay = "default"
+frame_progress = 0.881591
 
 [node name="Area2D" type="Area2D" parent="Package"]
 position = Vector2(-5.96046e-08, -5.96046e-08)
-scale = Vector2(1, 1)
 collision_layer = 2
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Package/Area2D"]
-position = Vector2(-1.90735e-06, 7.62939e-06)
+position = Vector2(5.96046e-08, 5.96046e-08)
 shape = SubResource("CircleShape2D_7davj")
+
+[node name="Area2D2" type="Area2D" parent="Package"]
+position = Vector2(0, -3.96537e-15)
+scale = Vector2(1, 1)
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Package/Area2D2"]
+position = Vector2(-9.80275e-07, -0.535395)
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_7davj")
 
 [connection signal="body_entered" from="Package/Area2D" to="Package" method="_on_detection_area_body_entered"]
 [connection signal="body_exited" from="Package/Area2D" to="Package" method="_on_detection_area_body_exited"]
