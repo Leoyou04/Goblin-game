@@ -1,45 +1,9 @@
-[gd_scene load_steps=18 format=3 uid="uid://kui5r4xmdqg7"]
+[gd_scene load_steps=19 format=3 uid="uid://kui5r4xmdqg7"]
 
 [ext_resource type="Texture2D" uid="uid://b26nxp7bksupm" path="res://goblin lobby.jpg" id="1_05l2w"]
 [ext_resource type="Script" uid="uid://dn4ife0nx673j" path="res://button.gd" id="2_hafda"]
 [ext_resource type="Texture2D" uid="uid://bkcbikbvcxni0" path="res://FLYING.png" id="3_tpml5"]
 [ext_resource type="Texture2D" uid="uid://ba2pu8mbrnjgk" path="res://Torch_Red.png" id="4_jqemp"]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_7q8iw"]
-atlas = ExtResource("3_tpml5")
-region = Rect2(0, 0, 81, 71)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_gyqw4"]
-atlas = ExtResource("3_tpml5")
-region = Rect2(81, 0, 81, 71)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_x74gu"]
-atlas = ExtResource("3_tpml5")
-region = Rect2(162, 0, 81, 71)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_34xv4"]
-atlas = ExtResource("3_tpml5")
-region = Rect2(243, 0, 81, 71)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_013yr"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_7q8iw")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_gyqw4")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_x74gu")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_34xv4")
-}],
-"loop": true,
-"name": &"default",
-"speed": 11.0
-}]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8vmu4"]
 atlas = ExtResource("4_jqemp")
@@ -98,6 +62,45 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_7q8iw"]
+atlas = ExtResource("3_tpml5")
+region = Rect2(0, 0, 81, 71)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gyqw4"]
+atlas = ExtResource("3_tpml5")
+region = Rect2(81, 0, 81, 71)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x74gu"]
+atlas = ExtResource("3_tpml5")
+region = Rect2(162, 0, 81, 71)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_34xv4"]
+atlas = ExtResource("3_tpml5")
+region = Rect2(243, 0, 81, 71)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_013yr"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7q8iw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gyqw4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x74gu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_34xv4")
+}],
+"loop": true,
+"name": &"default",
+"speed": 11.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_05l2w"]
+size = Vector2(152.549, 91.9798)
+
 [node name="Title Screen" type="Node2D"]
 
 [node name="TextureRect" type="TextureRect" parent="."]
@@ -106,25 +109,30 @@ offset_bottom = 720.0
 scale = Vector2(0.92, 0.92)
 texture = ExtResource("1_05l2w")
 
-[node name="Button" type="Button" parent="TextureRect"]
-layout_mode = 0
-offset_left = 3.26087
-offset_top = 582.608
-offset_right = 159.261
-offset_bottom = 674.608
-scale = Vector2(1.24869, 1.3052)
-text = "PLAY"
-script = ExtResource("2_hafda")
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="TextureRect/Button"]
-position = Vector2(600.629, -168.223)
-scale = Vector2(1.18716, 0.99846)
-sprite_frames = SubResource("SpriteFrames_013yr")
-autoplay = "default"
-
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(593, 422)
 scale = Vector2(2.25521, 2.68978)
 sprite_frames = SubResource("SpriteFrames_wot2p")
 autoplay = "default"
 frame_progress = 0.749996
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="."]
+position = Vector2(752.999, 316.435)
+scale = Vector2(1.48239, 1.30319)
+sprite_frames = SubResource("SpriteFrames_013yr")
+autoplay = "default"
+
+[node name="Button" type="Button" parent="."]
+offset_left = 3.0
+offset_top = 535.999
+offset_right = 159.0
+offset_bottom = 627.999
+scale = Vector2(1.24869, 1.3052)
+text = "PLAY"
+script = ExtResource("2_hafda")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Button"]
+position = Vector2(78.2873, 45.1844)
+shape = SubResource("RectangleShape2D_05l2w")
+
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]

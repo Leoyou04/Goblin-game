@@ -69,13 +69,9 @@ shape = SubResource("CircleShape2D_7davj")
 
 [node name="Area2D2" type="Area2D" parent="Package"]
 position = Vector2(0, -3.96537e-15)
-scale = Vector2(1, 1)
-collision_layer = 2
-collision_mask = 2
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Package/Area2D2"]
 position = Vector2(-9.80275e-07, -0.535395)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_7davj")
 
 [connection signal="body_entered" from="Package/Area2D" to="Package" method="_on_detection_area_body_entered"]
