@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="game 2025"
-run/main_scene="uid://egme54o27aqv"
+run/main_scene="uid://kui5r4xmdqg7"
 config/features=PackedStringArray("4.4", "GL Compatibility")
 config/icon="res://icon.svg"
 

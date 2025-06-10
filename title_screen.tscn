@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://kui5r4xmdqg7"]
+[gd_scene load_steps=18 format=3 uid="uid://kui5r4xmdqg7"]
 
 [ext_resource type="Texture2D" uid="uid://b26nxp7bksupm" path="res://goblin lobby.jpg" id="1_05l2w"]
 [ext_resource type="Script" uid="uid://dn4ife0nx673j" path="res://button.gd" id="2_hafda"]
@@ -98,9 +98,6 @@ animations = [{
 "speed": 11.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_05l2w"]
-size = Vector2(152.549, 91.9798)
-
 [node name="Title Screen" type="Node2D"]
 
 [node name="TextureRect" type="TextureRect" parent="."]
@@ -130,9 +127,5 @@ offset_bottom = 627.999
 scale = Vector2(1.24869, 1.3052)
 text = "PLAY"
 script = ExtResource("2_hafda")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Button"]
-position = Vector2(78.2873, 45.1844)
-shape = SubResource("RectangleShape2D_05l2w")
 
 [connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
