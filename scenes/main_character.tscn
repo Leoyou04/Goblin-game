@@ -54,12 +54,12 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0ltrl"]
-size = Vector2(36.9983, 25.2416)
+size = Vector2(24.6871, 25.7129)
 
 [node name="Player" type="CharacterBody2D"]
 scale = Vector2(1.57969, 1.64377)
-collision_layer = 15
-collision_mask = 15
+collision_layer = 3
+collision_mask = 3
 script = ExtResource("1_ig48j")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
@@ -71,6 +71,6 @@ frame = 4
 frame_progress = 0.380614
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-0.437873, 0.437867)
+position = Vector2(0.633036, 0.364283)
 scale = Vector2(0.307708, 0.31225)
 shape = SubResource("RectangleShape2D_0ltrl")

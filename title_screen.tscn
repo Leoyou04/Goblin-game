@@ -108,6 +108,7 @@ scale = Vector2(0.92, 0.92)
 texture = ExtResource("1_05l2w")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
 position = Vector2(593, 422)
 scale = Vector2(2.25521, 2.68978)
 sprite_frames = SubResource("SpriteFrames_wot2p")
@@ -115,6 +116,7 @@ autoplay = "default"
 frame_progress = 0.749996
 
 [node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
 position = Vector2(752.999, 316.435)
 scale = Vector2(1.48239, 1.30319)
 sprite_frames = SubResource("SpriteFrames_013yr")
