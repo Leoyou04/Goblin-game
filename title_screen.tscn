@@ -1,9 +1,10 @@
-[gd_scene load_steps=18 format=3 uid="uid://kui5r4xmdqg7"]
+[gd_scene load_steps=19 format=3 uid="uid://kui5r4xmdqg7"]
 
 [ext_resource type="Texture2D" uid="uid://b26nxp7bksupm" path="res://goblin lobby.jpg" id="1_05l2w"]
 [ext_resource type="Script" uid="uid://dn4ife0nx673j" path="res://button.gd" id="2_hafda"]
 [ext_resource type="Texture2D" uid="uid://bkcbikbvcxni0" path="res://FLYING.png" id="3_tpml5"]
 [ext_resource type="Texture2D" uid="uid://ba2pu8mbrnjgk" path="res://Torch_Red.png" id="4_jqemp"]
+[ext_resource type="Texture2D" uid="uid://bhuh7o7lffoor" path="res://Cool Text - Goblin Delivery 484508221199483.png" id="5_hafda"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8vmu4"]
 atlas = ExtResource("4_jqemp")
@@ -127,5 +128,9 @@ offset_bottom = 627.999
 scale = Vector2(1.24869, 1.3052)
 text = "PLAY"
 script = ExtResource("2_hafda")
+
+[node name="CoolText-GoblinDelivery484508221199483" type="Sprite2D" parent="."]
+position = Vector2(570, 118)
+texture = ExtResource("5_hafda")
 
 [connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
