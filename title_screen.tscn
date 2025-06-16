@@ -128,11 +128,13 @@ offset_top = 535.999
 offset_right = 159.0
 offset_bottom = 627.999
 scale = Vector2(1.24869, 1.3052)
+theme_override_colors/font_hover_pressed_color = Color(0.82, 0.17712, 0.1312, 1)
+theme_override_colors/font_hover_color = Color(0.71, 0.1278, 0.1278, 1)
 text = "PLAY"
 script = ExtResource("2_hafda")
 
 [node name="CoolText-GoblinDelivery484508221199483" type="Sprite2D" parent="."]
-position = Vector2(570, 118)
+position = Vector2(580, 111)
 texture = ExtResource("5_hafda")
 
 [connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
