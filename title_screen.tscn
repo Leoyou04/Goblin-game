@@ -133,8 +133,21 @@ theme_override_colors/font_hover_color = Color(0.71, 0.1278, 0.1278, 1)
 text = "PLAY"
 script = ExtResource("2_hafda")
 
+[node name="Button" type="Button" parent="Button"]
+offset_left = 12.8135
+offset_top = -95.77
+offset_right = 117.813
+offset_bottom = -31.77
+scale = Vector2(1.24869, 1.3052)
+theme_override_colors/font_hover_pressed_color = Color(0.82, 0.17712, 0.1312, 1)
+theme_override_colors/font_hover_color = Color(0.71, 0.1278, 0.1278, 1)
+text = "Tutorial
+"
+script = ExtResource("2_hafda")
+
 [node name="CoolText-GoblinDelivery484508221199483" type="Sprite2D" parent="."]
 position = Vector2(580, 111)
 texture = ExtResource("5_hafda")
 
 [connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
+[connection signal="pressed" from="Button/Button" to="Button/Button" method="_on_pressed"]
