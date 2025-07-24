@@ -134,6 +134,7 @@ text = "PLAY"
 script = ExtResource("2_hafda")
 
 [node name="Button" type="Button" parent="Button"]
+layout_mode = 0
 offset_left = 12.8135
 offset_top = -95.77
 offset_right = 117.813

@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://egme54o27aqv"]
+[gd_scene load_steps=17 format=3 uid="uid://egme54o27aqv"]
 
 [ext_resource type="Texture2D" uid="uid://bhs8d7yv5g7q4" path="res://Gray.png" id="1_h2yge"]
 [ext_resource type="Texture2D" uid="uid://ctkyo43sw8cxe" path="res://Tilemap_Flat.png" id="2_1bvp3"]
@@ -12,6 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://dpgt7p0fiqviy" path="res://generated_text (1).png" id="9_kek77"]
 [ext_resource type="PackedScene" uid="uid://c2g0cig3lmbmp" path="res://animated_sprite_2d.tscn" id="11_dg77c"]
 [ext_resource type="PackedScene" uid="uid://c7iifluhty8t7" path="res://death_thing_boing.tscn" id="12_dg77c"]
+[ext_resource type="Script" uid="uid://dn4ife0nx673j" path="res://button.gd" id="13_ycdy4"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dg77c"]
 texture = ExtResource("2_1bvp3")
@@ -1459,3 +1460,139 @@ position = Vector2(2298, -2850)
 scale = Vector2(0.32, 1)
 collision_layer = 9
 collision_mask = 9
+
+[node name="Button" type="Button" parent="."]
+anchors_preset = -1
+anchor_right = 0.048
+anchor_bottom = 0.078
+offset_left = -76.0
+offset_top = 627.0
+offset_right = -17.296
+offset_bottom = 607.456
+scale = Vector2(1.24869, 1.3052)
+theme_override_colors/font_hover_pressed_color = Color(0.82, 0.17712, 0.1312, 1)
+theme_override_colors/font_hover_color = Color(0.71, 0.1278, 0.1278, 1)
+text = "back to menu
+"
+script = ExtResource("13_ycdy4")
+
+[node name="Button" type="Button" parent="Button"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.048
+anchor_bottom = 0.078
+offset_left = 3021.57
+offset_top = -336.347
+offset_right = 3130.09
+offset_bottom = -307.765
+scale = Vector2(1.24869, 1.3052)
+theme_override_colors/font_hover_pressed_color = Color(0.82, 0.17712, 0.1312, 1)
+theme_override_colors/font_hover_color = Color(0.71, 0.1278, 0.1278, 1)
+text = "back to menu
+"
+script = ExtResource("13_ycdy4")
+
+[node name="Button" type="Button" parent="Button/Button"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.048
+anchor_bottom = 0.078
+offset_left = -391.219
+offset_top = -1138.21
+offset_right = -282.691
+offset_bottom = -1109.63
+scale = Vector2(1.24869, 1.3052)
+theme_override_colors/font_hover_pressed_color = Color(0.82, 0.17712, 0.1312, 1)
+theme_override_colors/font_hover_color = Color(0.71, 0.1278, 0.1278, 1)
+text = "back to menu
+"
+script = ExtResource("13_ycdy4")
+
+[node name="Button" type="Button" parent="Button/Button/Button"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.048
+anchor_bottom = 0.078
+offset_left = -178.224
+offset_top = 785.259
+offset_right = -69.6958
+offset_bottom = 813.841
+scale = Vector2(1.24869, 1.3052)
+theme_override_colors/font_hover_pressed_color = Color(0.82, 0.17712, 0.1312, 1)
+theme_override_colors/font_hover_color = Color(0.71, 0.1278, 0.1278, 1)
+text = "back to menu
+"
+script = ExtResource("13_ycdy4")
+
+[node name="Button" type="Button" parent="Button/Button/Button/Button"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.048
+anchor_bottom = 0.078
+offset_left = -206.895
+offset_top = -555.81
+offset_right = -98.3668
+offset_bottom = -527.228
+scale = Vector2(1.24869, 1.3052)
+theme_override_colors/font_hover_pressed_color = Color(0.82, 0.17712, 0.1312, 1)
+theme_override_colors/font_hover_color = Color(0.71, 0.1278, 0.1278, 1)
+text = "back to menu
+"
+script = ExtResource("13_ycdy4")
+
+[node name="Button" type="Button" parent="Button/Button/Button/Button/Button"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.048
+anchor_bottom = 0.078
+offset_left = -618.288
+offset_top = 341.888
+offset_right = -509.76
+offset_bottom = 370.47
+scale = Vector2(1.24869, 1.3052)
+theme_override_colors/font_hover_pressed_color = Color(0.82, 0.17712, 0.1312, 1)
+theme_override_colors/font_hover_color = Color(0.71, 0.1278, 0.1278, 1)
+text = "back to menu
+"
+script = ExtResource("13_ycdy4")
+
+[node name="Button" type="Button" parent="Button/Button/Button/Button/Button/Button"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.048
+anchor_bottom = 0.078
+offset_left = 179.0
+offset_top = -372.0
+offset_right = 287.528
+offset_bottom = -343.418
+scale = Vector2(1.24869, 1.3052)
+theme_override_colors/font_hover_pressed_color = Color(0.82, 0.17712, 0.1312, 1)
+theme_override_colors/font_hover_color = Color(0.71, 0.1278, 0.1278, 1)
+text = "back to menu
+"
+script = ExtResource("13_ycdy4")
+
+[node name="Button" type="Button" parent="Button/Button/Button/Button/Button/Button/Button"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.048
+anchor_bottom = 0.078
+offset_left = 453.882
+offset_top = -113.891
+offset_right = 562.41
+offset_bottom = -85.3088
+scale = Vector2(1.24869, 1.3052)
+theme_override_colors/font_hover_pressed_color = Color(0.82, 0.17712, 0.1312, 1)
+theme_override_colors/font_hover_color = Color(0.71, 0.1278, 0.1278, 1)
+text = "back to menu
+"
+script = ExtResource("13_ycdy4")
+
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
+[connection signal="pressed" from="Button/Button" to="Button/Button" method="_on_pressed"]
+[connection signal="pressed" from="Button/Button/Button" to="Button/Button/Button" method="_on_pressed"]
+[connection signal="pressed" from="Button/Button/Button/Button" to="Button/Button/Button/Button" method="_on_pressed"]
+[connection signal="pressed" from="Button/Button/Button/Button/Button" to="Button/Button/Button/Button/Button" method="_on_pressed"]
+[connection signal="pressed" from="Button/Button/Button/Button/Button/Button" to="Button/Button/Button/Button/Button/Button" method="_on_pressed"]
+[connection signal="pressed" from="Button/Button/Button/Button/Button/Button/Button" to="Button/Button/Button/Button/Button/Button/Button" method="_on_pressed"]
+[connection signal="pressed" from="Button/Button/Button/Button/Button/Button/Button/Button" to="Button/Button/Button/Button/Button/Button/Button/Button" method="_on_pressed"]
