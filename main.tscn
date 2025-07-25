@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://egme54o27aqv"]
+[gd_scene load_steps=18 format=3 uid="uid://egme54o27aqv"]
 
 [ext_resource type="Texture2D" uid="uid://bhs8d7yv5g7q4" path="res://Gray.png" id="1_h2yge"]
 [ext_resource type="Texture2D" uid="uid://ctkyo43sw8cxe" path="res://Tilemap_Flat.png" id="2_1bvp3"]
@@ -12,9 +12,10 @@
 [ext_resource type="Texture2D" uid="uid://dpgt7p0fiqviy" path="res://generated_text (1).png" id="9_kek77"]
 [ext_resource type="PackedScene" uid="uid://c2g0cig3lmbmp" path="res://animated_sprite_2d.tscn" id="11_dg77c"]
 [ext_resource type="PackedScene" uid="uid://c7iifluhty8t7" path="res://death_thing_boing.tscn" id="12_dg77c"]
-[ext_resource type="Script" uid="uid://dn4ife0nx673j" path="res://button.gd" id="13_ycdy4"]
+[ext_resource type="Script" uid="uid://cu2o4pn021cxp" path="res://button_titlescreen.gd" id="13_w48qg"]
+[ext_resource type="Script" uid="uid://bjvremcj2g0fu" path="res://button_tutorial.gd" id="13_ycdy4"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dg77c"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_w48qg"]
 texture = ExtResource("2_1bvp3")
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
@@ -1059,7 +1060,7 @@ texture = ExtResource("2_1bvp3")
 35:15/0 = 0
 35:15/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ycdy4"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vivmo"]
 texture = ExtResource("3_1bvp3")
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
@@ -1351,8 +1352,8 @@ texture = ExtResource("3_1bvp3")
 physics_layer_0/collision_layer = 11
 physics_layer_0/collision_mask = 11
 navigation_layer_0/layers = 5
-sources/0 = SubResource("TileSetAtlasSource_dg77c")
-sources/1 = SubResource("TileSetAtlasSource_ycdy4")
+sources/0 = SubResource("TileSetAtlasSource_w48qg")
+sources/1 = SubResource("TileSetAtlasSource_vivmo")
 
 [node name="Node" type="Node"]
 
@@ -1461,138 +1462,121 @@ scale = Vector2(0.32, 1)
 collision_layer = 9
 collision_mask = 9
 
-[node name="Button" type="Button" parent="."]
-anchors_preset = -1
-anchor_right = 0.048
-anchor_bottom = 0.078
-offset_left = -76.0
-offset_top = 627.0
-offset_right = -17.296
-offset_bottom = 607.456
+[node name="Button2" type="Button" parent="."]
+offset_left = -82.0
+offset_top = 630.0
+offset_right = 33.0
+offset_bottom = 661.0
 scale = Vector2(1.24869, 1.3052)
 theme_override_colors/font_hover_pressed_color = Color(0.82, 0.17712, 0.1312, 1)
 theme_override_colors/font_hover_color = Color(0.71, 0.1278, 0.1278, 1)
-text = "back to menu
+text = "Back to menu
 "
-script = ExtResource("13_ycdy4")
+script = ExtResource("13_w48qg")
 
-[node name="Button" type="Button" parent="Button"]
-layout_mode = 1
-anchors_preset = -1
-anchor_right = 0.048
-anchor_bottom = 0.078
-offset_left = 3021.57
-offset_top = -336.347
-offset_right = 3130.09
-offset_bottom = -307.765
+[node name="Button2" type="Button" parent="Button2"]
+layout_mode = 0
+offset_left = 3070.42
+offset_top = -445.142
+offset_right = 3185.42
+offset_bottom = -414.142
+rotation = 1.57302
 scale = Vector2(1.24869, 1.3052)
 theme_override_colors/font_hover_pressed_color = Color(0.82, 0.17712, 0.1312, 1)
 theme_override_colors/font_hover_color = Color(0.71, 0.1278, 0.1278, 1)
-text = "back to menu
+text = "Back to menu
 "
 script = ExtResource("13_ycdy4")
 
-[node name="Button" type="Button" parent="Button/Button"]
-layout_mode = 1
-anchors_preset = -1
-anchor_right = 0.048
-anchor_bottom = 0.078
-offset_left = -391.219
-offset_top = -1138.21
-offset_right = -282.691
-offset_bottom = -1109.63
-scale = Vector2(1.24869, 1.3052)
+[node name="Button2" type="Button" parent="Button2/Button2"]
+layout_mode = 0
+offset_left = -1124.46
+offset_top = 361.948
+offset_right = -1009.46
+offset_bottom = 392.948
+rotation = -1.56048
+scale = Vector2(0.399665, 0.81103)
 theme_override_colors/font_hover_pressed_color = Color(0.82, 0.17712, 0.1312, 1)
 theme_override_colors/font_hover_color = Color(0.71, 0.1278, 0.1278, 1)
-text = "back to menu
+text = "Back to menu
 "
 script = ExtResource("13_ycdy4")
 
-[node name="Button" type="Button" parent="Button/Button/Button"]
-layout_mode = 1
-anchors_preset = -1
-anchor_right = 0.048
-anchor_bottom = 0.078
-offset_left = -178.224
-offset_top = 785.259
-offset_right = -69.6958
-offset_bottom = 813.841
-scale = Vector2(1.24869, 1.3052)
+[node name="Button2" type="Button" parent="Button2/Button2/Button2"]
+layout_mode = 0
+offset_left = -578.227
+offset_top = 1179.36
+offset_right = -463.227
+offset_bottom = 1210.36
+rotation = 0.010621
+scale = Vector2(0.399665, 0.81103)
 theme_override_colors/font_hover_pressed_color = Color(0.82, 0.17712, 0.1312, 1)
 theme_override_colors/font_hover_color = Color(0.71, 0.1278, 0.1278, 1)
-text = "back to menu
+text = "Back to menu
 "
 script = ExtResource("13_ycdy4")
 
-[node name="Button" type="Button" parent="Button/Button/Button/Button"]
-layout_mode = 1
-anchors_preset = -1
-anchor_right = 0.048
-anchor_bottom = 0.078
-offset_left = -206.895
-offset_top = -555.81
-offset_right = -98.3668
-offset_bottom = -527.228
-scale = Vector2(1.24869, 1.3052)
+[node name="Button2" type="Button" parent="Button2/Button2/Button2/Button2"]
+layout_mode = 0
+offset_left = -2091.01
+offset_top = -1273.91
+offset_right = -1976.01
+offset_bottom = -1242.91
+rotation = 0.010621
+scale = Vector2(1.65612, 0.817131)
 theme_override_colors/font_hover_pressed_color = Color(0.82, 0.17712, 0.1312, 1)
 theme_override_colors/font_hover_color = Color(0.71, 0.1278, 0.1278, 1)
-text = "back to menu
+text = "Back to menu
 "
 script = ExtResource("13_ycdy4")
 
-[node name="Button" type="Button" parent="Button/Button/Button/Button/Button"]
-layout_mode = 1
-anchors_preset = -1
-anchor_right = 0.048
-anchor_bottom = 0.078
-offset_left = -618.288
-offset_top = 341.888
-offset_right = -509.76
-offset_bottom = 370.47
-scale = Vector2(1.24869, 1.3052)
+[node name="Button2" type="Button" parent="Button2/Button2/Button2/Button2/Button2"]
+layout_mode = 0
+offset_left = -4004.18
+offset_top = 1622.16
+offset_right = -3889.18
+offset_bottom = 1653.16
+rotation = 0.010621
+scale = Vector2(1.65612, 0.817131)
 theme_override_colors/font_hover_pressed_color = Color(0.82, 0.17712, 0.1312, 1)
 theme_override_colors/font_hover_color = Color(0.71, 0.1278, 0.1278, 1)
-text = "back to menu
+text = "Back to menu
 "
 script = ExtResource("13_ycdy4")
 
-[node name="Button" type="Button" parent="Button/Button/Button/Button/Button/Button"]
-layout_mode = 1
-anchors_preset = -1
-anchor_right = 0.048
-anchor_bottom = 0.078
-offset_left = 179.0
-offset_top = -372.0
-offset_right = 287.528
-offset_bottom = -343.418
-scale = Vector2(1.24869, 1.3052)
+[node name="Button2" type="Button" parent="Button2/Button2/Button2/Button2/Button2/Button2"]
+layout_mode = 0
+offset_left = -190.174
+offset_top = -2334.25
+offset_right = -75.1741
+offset_bottom = -2303.25
+rotation = 0.010621
+scale = Vector2(1.65612, 0.817131)
 theme_override_colors/font_hover_pressed_color = Color(0.82, 0.17712, 0.1312, 1)
 theme_override_colors/font_hover_color = Color(0.71, 0.1278, 0.1278, 1)
-text = "back to menu
+text = "Back to menu
 "
 script = ExtResource("13_ycdy4")
 
-[node name="Button" type="Button" parent="Button/Button/Button/Button/Button/Button/Button"]
-layout_mode = 1
-anchors_preset = -1
-anchor_right = 0.048
-anchor_bottom = 0.078
-offset_left = 453.882
-offset_top = -113.891
-offset_right = 562.41
-offset_bottom = -85.3088
-scale = Vector2(1.24869, 1.3052)
+[node name="Button2" type="Button" parent="Button2/Button2/Button2/Button2/Button2/Button2/Button2"]
+layout_mode = 0
+offset_left = 2238.17
+offset_top = -1556.11
+offset_right = 2353.17
+offset_bottom = -1525.11
+rotation = -0.139999
+scale = Vector2(0.424168, 1.16198)
 theme_override_colors/font_hover_pressed_color = Color(0.82, 0.17712, 0.1312, 1)
 theme_override_colors/font_hover_color = Color(0.71, 0.1278, 0.1278, 1)
-text = "back to menu
+text = "Back to menu
 "
 script = ExtResource("13_ycdy4")
 
-[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
-[connection signal="pressed" from="Button/Button" to="Button/Button" method="_on_pressed"]
-[connection signal="pressed" from="Button/Button/Button" to="Button/Button/Button" method="_on_pressed"]
-[connection signal="pressed" from="Button/Button/Button/Button" to="Button/Button/Button/Button" method="_on_pressed"]
-[connection signal="pressed" from="Button/Button/Button/Button/Button" to="Button/Button/Button/Button/Button" method="_on_pressed"]
-[connection signal="pressed" from="Button/Button/Button/Button/Button/Button" to="Button/Button/Button/Button/Button/Button" method="_on_pressed"]
-[connection signal="pressed" from="Button/Button/Button/Button/Button/Button/Button" to="Button/Button/Button/Button/Button/Button/Button" method="_on_pressed"]
-[connection signal="pressed" from="Button/Button/Button/Button/Button/Button/Button/Button" to="Button/Button/Button/Button/Button/Button/Button/Button" method="_on_pressed"]
+[connection signal="pressed" from="Button2" to="Button2" method="_on_pressed"]
+[connection signal="pressed" from="Button2/Button2" to="Button2/Button2" method="_on_pressed"]
+[connection signal="pressed" from="Button2/Button2/Button2" to="Button2/Button2/Button2" method="_on_pressed"]
+[connection signal="pressed" from="Button2/Button2/Button2/Button2" to="Button2/Button2/Button2/Button2" method="_on_pressed"]
+[connection signal="pressed" from="Button2/Button2/Button2/Button2/Button2" to="Button2/Button2/Button2/Button2/Button2" method="_on_pressed"]
+[connection signal="pressed" from="Button2/Button2/Button2/Button2/Button2/Button2" to="Button2/Button2/Button2/Button2/Button2/Button2" method="_on_pressed"]
+[connection signal="pressed" from="Button2/Button2/Button2/Button2/Button2/Button2/Button2" to="Button2/Button2/Button2/Button2/Button2/Button2/Button2" method="_on_pressed"]
+[connection signal="pressed" from="Button2/Button2/Button2/Button2/Button2/Button2/Button2/Button2" to="Button2/Button2/Button2/Button2/Button2/Button2/Button2/Button2" method="_on_pressed"]
