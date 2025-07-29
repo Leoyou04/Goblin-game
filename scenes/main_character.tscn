@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://ccpv7pfg6tv1t"]
+[gd_scene load_steps=19 format=3 uid="uid://ccpv7pfg6tv1t"]
 
 [ext_resource type="Script" uid="uid://cas2gj7rtiim7" path="res://scenes/main_character.gd" id="1_ig48j"]
 [ext_resource type="Texture2D" uid="uid://ba2pu8mbrnjgk" path="res://Torch_Red.png" id="1_nrcqd"]
@@ -30,6 +30,10 @@ region = Rect2(960, 0, 192, 192)
 [sub_resource type="AtlasTexture" id="AtlasTexture_d3a2h"]
 atlas = ExtResource("1_nrcqd")
 region = Rect2(1152, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8rh4e"]
+atlas = ExtResource("1_nrcqd")
+region = Rect2(960, 384, 192, 192)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_0ltrl"]
 atlas = ExtResource("1_nrcqd")
@@ -85,6 +89,14 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_8rh4e")
+}],
+"loop": true,
+"name": &"new_animation",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_0ltrl")
 }, {
 "duration": 1.0,
@@ -120,7 +132,7 @@ script = ExtResource("1_ig48j")
 position = Vector2(0.633036, 0.608357)
 scale = Vector2(0.125482, 0.11975)
 sprite_frames = SubResource("SpriteFrames_d3a2h")
-animation = &"idle"
+animation = &"new_animation"
 autoplay = "idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
