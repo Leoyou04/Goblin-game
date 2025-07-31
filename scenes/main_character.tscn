@@ -115,7 +115,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_pvtuh")
 }],
 "loop": true,
-"name": &"running",
+"name": &"run",
 "speed": 5.0
 }]
 
@@ -132,8 +132,9 @@ script = ExtResource("1_ig48j")
 position = Vector2(0.633036, 0.608357)
 scale = Vector2(0.125482, 0.11975)
 sprite_frames = SubResource("SpriteFrames_d3a2h")
-animation = &"new_animation"
+animation = &"run"
 autoplay = "idle"
+frame_progress = 0.206373
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0.633036, 0.364283)

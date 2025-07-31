@@ -1401,7 +1401,7 @@ offset_left = -75.0
 offset_top = 542.0
 offset_right = 944.0
 offset_bottom = 588.0
-text = " bring the bat to the                     press space twice to double jump                     well done you completed the tutorial"
+text = " bring the bat to the end                    press space twice to double jump                     well done you completed the tutorial"
 
 [node name="Label" type="Label" parent="Label"]
 layout_mode = 0
