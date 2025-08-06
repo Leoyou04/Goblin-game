@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://dnslligikx8ak"]
+[gd_scene load_steps=15 format=3 uid="uid://dnslligikx8ak"]
 
 [ext_resource type="Texture2D" uid="uid://ctkyo43sw8cxe" path="res://Tilemap_Flat.png" id="3_r462f"]
 [ext_resource type="Texture2D" uid="uid://cneg0qaobywcs" path="res://Terrain (16x16).png" id="4_ygvo0"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://lcsrym0tvw7g" path="res://goblin king.png" id="6_3l0ko"]
 [ext_resource type="Texture2D" uid="uid://3k273lc2ro35" path="res://goblin_king_impossible.png" id="6_sck4r"]
 [ext_resource type="Texture2D" uid="uid://dch2xkwqrtmi7" path="res://bested.png" id="7_1mhn8"]
+[ext_resource type="AudioStream" uid="uid://8ale2cclqbfi" path="res://sounds/game2.mp3" id="8_0rof8"]
 [ext_resource type="PackedScene" uid="uid://cb5644vwj3qqx" path="res://package_code.tscn" id="8_0wsoa"]
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_sck4r"]
@@ -1563,3 +1564,8 @@ texture = ExtResource("6_sck4r")
 position = Vector2(1817, -408)
 scale = Vector2(0.0564181, 0.128378)
 texture = ExtResource("7_1mhn8")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("8_0rof8")
+autoplay = true
+parameters/looping = true

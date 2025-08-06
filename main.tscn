@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://egme54o27aqv"]
+[gd_scene load_steps=21 format=3 uid="uid://egme54o27aqv"]
 
 [ext_resource type="Texture2D" uid="uid://bhs8d7yv5g7q4" path="res://Gray.png" id="1_h2yge"]
 [ext_resource type="Texture2D" uid="uid://ctkyo43sw8cxe" path="res://Tilemap_Flat.png" id="2_1bvp3"]
@@ -16,6 +16,7 @@
 [ext_resource type="Script" uid="uid://bjvremcj2g0fu" path="res://button_tutorial.gd" id="13_ycdy4"]
 [ext_resource type="Texture2D" uid="uid://daw6h72tvvl4" path="res://end_goblin_text.png" id="15_vivmo"]
 [ext_resource type="Texture2D" uid="uid://ddd8sm5c0s08s" path="res://Fono.png" id="16_2cqfq"]
+[ext_resource type="AudioStream" uid="uid://b6fu2cd2g4twq" path="res://sounds/game.mp3" id="17_yaehf"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_w48qg"]
 texture = ExtResource("2_1bvp3")
@@ -1593,6 +1594,12 @@ texture = ExtResource("15_vivmo")
 position = Vector2(987, -1397)
 scale = Vector2(0.128488, 0.152071)
 texture = ExtResource("16_2cqfq")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("17_yaehf")
+volume_db = -9.194
+autoplay = true
+parameters/looping = true
 
 [connection signal="pressed" from="Button2" to="Button2" method="_on_pressed"]
 [connection signal="pressed" from="Button2/Button2" to="Button2/Button2" method="_on_pressed"]
