@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://kui5r4xmdqg7"]
+[gd_scene load_steps=23 format=3 uid="uid://kui5r4xmdqg7"]
 
 [ext_resource type="Texture2D" uid="uid://b26nxp7bksupm" path="res://goblin lobby.jpg" id="1_05l2w"]
 [ext_resource type="Script" uid="uid://dn4ife0nx673j" path="res://button.gd" id="2_hafda"]
@@ -8,6 +8,7 @@
 [ext_resource type="Script" uid="uid://bjvremcj2g0fu" path="res://button_tutorial.gd" id="6_tpml5"]
 [ext_resource type="Script" uid="uid://dy5e4qj0hxhi7" path="res://button_imposible.gd" id="7_jqemp"]
 [ext_resource type="AudioStream" uid="uid://oub262sxpdi" path="res://sounds/main_menu.mp3" id="8_013yr"]
+[ext_resource type="PackedScene" uid="uid://d2i6ejp3fi8v" path="res://scenes/audio_ui.tscn" id="9_8vmu4"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8vmu4"]
 atlas = ExtResource("4_jqemp")
@@ -118,6 +119,16 @@ sprite_frames = SubResource("SpriteFrames_wot2p")
 autoplay = "default"
 frame_progress = 0.749996
 
+[node name="Button" type="Button" parent="."]
+offset_top = 455.0
+offset_right = 203.0
+offset_bottom = 509.0
+theme_override_colors/font_hover_pressed_color = Color(0.82, 0.17712, 0.1312, 1)
+theme_override_colors/font_hover_color = Color(0.71, 0.1278, 0.1278, 1)
+text = "PLAY
+Normal level"
+script = ExtResource("2_hafda")
+
 [node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
 position = Vector2(752.999, 316.435)
@@ -125,28 +136,20 @@ scale = Vector2(1.48239, 1.30319)
 sprite_frames = SubResource("SpriteFrames_013yr")
 autoplay = "default"
 
-[node name="Button" type="Button" parent="."]
-offset_left = 3.0
-offset_top = 535.999
-offset_right = 159.0
-offset_bottom = 627.999
-scale = Vector2(1.24869, 1.3052)
-theme_override_colors/font_hover_pressed_color = Color(0.82, 0.17712, 0.1312, 1)
-theme_override_colors/font_hover_color = Color(0.71, 0.1278, 0.1278, 1)
-text = "PLAY
-Normal level"
-script = ExtResource("2_hafda")
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_013yr")
+autoplay = true
+parameters/looping = true
 
 [node name="CoolText-GoblinDelivery484508221199483" type="Sprite2D" parent="."]
 position = Vector2(580, 111)
 texture = ExtResource("5_hafda")
 
 [node name="Button2" type="Button" parent="."]
-offset_left = 19.0001
-offset_top = 411.0
-offset_right = 124.0
-offset_bottom = 475.0
-scale = Vector2(1.24869, 1.3052)
+offset_left = 1.0
+offset_top = 511.0
+offset_right = 205.0
+offset_bottom = 542.0
 theme_override_colors/font_hover_pressed_color = Color(0.82, 0.17712, 0.1312, 1)
 theme_override_colors/font_hover_color = Color(0.71, 0.1278, 0.1278, 1)
 text = "Tutorial
@@ -154,18 +157,19 @@ text = "Tutorial
 script = ExtResource("6_tpml5")
 
 [node name="Button3" type="Button" parent="."]
-offset_left = 217.0
-offset_top = 577.0
-offset_right = 323.0
-offset_bottom = 651.0
+offset_top = 544.0
+offset_right = 203.0
+offset_bottom = 649.0
 text = "IMPOSSIBLE
 Level"
 script = ExtResource("7_jqemp")
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("8_013yr")
-autoplay = true
-parameters/looping = true
+[node name="AudioUI" parent="." instance=ExtResource("9_8vmu4")]
+offset_left = 1091.0
+offset_top = 608.0
+offset_right = 1091.0
+offset_bottom = 608.0
+rotation = -1.56933
 
 [connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
 [connection signal="pressed" from="Button2" to="Button2" method="_on_pressed"]

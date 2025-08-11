@@ -1,7 +1,8 @@
-[gd_scene load_steps=19 format=3 uid="uid://ccpv7pfg6tv1t"]
+[gd_scene load_steps=20 format=3 uid="uid://ccpv7pfg6tv1t"]
 
 [ext_resource type="Script" uid="uid://cas2gj7rtiim7" path="res://scenes/main_character.gd" id="1_ig48j"]
 [ext_resource type="Texture2D" uid="uid://ba2pu8mbrnjgk" path="res://Torch_Red.png" id="1_nrcqd"]
+[ext_resource type="AudioStream" uid="uid://cvf2y8kkucrkk" path="res://sounds/jumppp22.ogg" id="3_tqm6u"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ig48j"]
 atlas = ExtResource("1_nrcqd")
@@ -140,3 +141,6 @@ frame_progress = 0.206373
 position = Vector2(0.633036, 0.364283)
 scale = Vector2(0.307708, 0.31225)
 shape = SubResource("RectangleShape2D_0ltrl")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_tqm6u")

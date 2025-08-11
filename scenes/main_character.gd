@@ -7,6 +7,7 @@ const SPEED = 200.0
 const JUMP_VELOCITY = -200.0  # Adjust jump strength as you want
 const GRAVITY = 1000  
  
+@onready var audio = $AudioStreamPlayer
 @onready var sprite: Sprite2D = $Sprite2D
 @onready var anim_sprite: AnimatedSprite2D = $AnimatedSprite2D
 
@@ -36,8 +37,10 @@ func _physics_process(delta: float) -> void:
 	if not is_on_floor():
 		if velocity.y < 0:
 			anim_sprite.play("jump")
+			audio.play()
 	else:
 		if abs(velocity.x) > 10:
 			anim_sprite.play("run")
 		else:
 			anim_sprite.play("idle")
+			
