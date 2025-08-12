@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://tsycack3sf3k"]
+[gd_scene load_steps=12 format=3 uid="uid://tsycack3sf3k"]
 
 [ext_resource type="Texture2D" uid="uid://bhs8d7yv5g7q4" path="res://Gray.png" id="1_73or5"]
 [ext_resource type="Texture2D" uid="uid://ctkyo43sw8cxe" path="res://Tilemap_Flat.png" id="2_jldhp"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://lcsrym0tvw7g" path="res://goblin king.png" id="5_hp7xp"]
 [ext_resource type="Script" uid="uid://dn4ife0nx673j" path="res://button.gd" id="7_73or5"]
 [ext_resource type="PackedScene" uid="uid://cb5644vwj3qqx" path="res://package_code.tscn" id="7_538ju"]
+[ext_resource type="AudioStream" uid="uid://d3ufdfm307udx" path="res://scenes/AIVoiceGenerator_com_12-08-2025T14_31_4_ Matthew.mp3" id="8_jldhp"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_su8sl"]
 texture = ExtResource("2_jldhp")
@@ -1421,5 +1422,12 @@ theme_override_colors/font_hover_pressed_color = Color(0.82, 0.17712, 0.1312, 1)
 theme_override_colors/font_hover_color = Color(0.71, 0.1278, 0.1278, 1)
 text = "press to play game"
 script = ExtResource("7_73or5")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+process_mode = 3
+auto_translate_mode = 1
+stream = ExtResource("8_jldhp")
+volume_db = 10.345
+autoplay = true
 
 [connection signal="pressed" from="Button" to="Button" method="_on_pressed"]

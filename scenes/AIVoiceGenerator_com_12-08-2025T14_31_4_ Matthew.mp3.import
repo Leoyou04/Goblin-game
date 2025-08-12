@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://d3ufdfm307udx"
+path="res://.godot/imported/AIVoiceGenerator_com_12-08-2025T14_31_4_ Matthew.mp3-9d303ce9a15c342bd6b1439ca258baf7.mp3str"
+
+[deps]
+
+source_file="res://scenes/AIVoiceGenerator_com_12-08-2025T14_31_4_ Matthew.mp3"
+dest_files=["res://.godot/imported/AIVoiceGenerator_com_12-08-2025T14_31_4_ Matthew.mp3-9d303ce9a15c342bd6b1439ca258baf7.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
